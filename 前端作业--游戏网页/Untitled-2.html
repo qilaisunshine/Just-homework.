@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+        }
+        ul,li{
+            list-style: none;
+        }
+        a{
+            display: block;
+        }
+        a:link,a:visited{
+            text-decoration: none;
+
+        }
+        .menu{
+            margin: 0px auto;
+            width: 100%;
+            height: 30px;
+        }
+        .menu ul{
+            margin: 0px;
+            padding: 0px;
+
+        }
+        .menu ul li{
+            position: relative;
+            float: left;
+            list-style: none;
+            font-size: 14px;
+            width:145px;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 1px;
+            background: rgb(37, 73, 82);
+        }
+
+        .menu ul li ul{
+            display: none;
+        }
+        .menu ul li ul li{
+            margin-top: 1px;
+        }
+        .menu ul li:hover{
+            background: rgb(227, 253, 253);
+        }
+        .menu ul li a:hover{
+            color: #00f;
+        }
+        .menu ul li:hover ul{
+            display: block;
+            position: absolute;
+            left: 0px;
+            top: 30px;
+        }
+        #aa{
+            color: rgb(189, 154, 141);
+        }
+        #c{
+            width: 100%;
+            height: 1000px;
+        }
+        #navi{
+            margin: 0 auto;
+            background: rgb(46, 57, 66);
+            width: 100%;
+            height: 40px;
+            font-size: 10px left;
+        }
+        #navi a{
+            height: 20px;
+            font-size: 14px;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-top: #fff 5px solid;
+            float: left;
+            background-color:rgb(46, 57, 66);
+            float: right;
+            color: rgb(186, 201, 214)
+        }
+        #navi a:hover{
+            color: rgb(74, 104, 109);
+            border-top: yellow 5px solid;
+        }
+        #d1{
+            width: 100%;
+            height: 700px;
+            background:url("QQ图片20190529085226.jpg");
+            background-size: contain;
+
+        }
+        #d2{
+            width: 100%;
+            height: 400px;
+            background:white;
+        }
+        #d3{
+            width: 100%;
+            height: 500px;
+            background:rgb(213, 224, 228)
+        }
+        #d4{
+            width: 100%;
+            height: 400px;
+            background:#ccc ;
+        }
+
+        .left{
+		    width:30%;
+		    height:300px;
+		    float:left;
+		}
+        .right{
+		    width:69%;
+		    height:350px;
+		    float:left;
+        }
+        #dd1{
+            position: absolute;
+            width: 800px;
+            height: 400px;
+            text-align: center;
+            top: 300px;
+            left: 550px;
+            background: #cef091;
+        }       
+        #dd1 a{
+            height: 20px;
+            font-size: 14px;
+            text-decoration: none;
+            padding: 5px 62px;
+            border-top: #fff 0px solid;
+            float: left;
+            background-color:gray;
+            position: relative;
+            top: 0;
+        }
+        #dd1 a:hover{
+            color: yellow;
+            border-top: yellow 0px solid;
+        }
+        .h{
+            width: 100%;
+            height: 400px;
+        }
+        #d21,#d22,#d23,#d24{
+            width: 200px;
+            height: 300px;
+            float: left;
+            border: 0px solid #000;
+            margin: 5px;
+            background: #ccc;
+            z-index:6;
+            overflow: hidden;
+        }
+        #d20{
+            width: 100%;
+            height: 50px;
+        }
+        #d25{
+            width: 480px;
+            height: 300px;
+            border: 1px solid #000;
+            margin: 5px;
+            float: right;
+        }
+        #d211{
+            width: 100%;
+            height: 200px;
+            transition:1s;
+        }
+        #d211:hover{
+            transform: scale(1.1);
+            
+        }
+        #i1{
+            width: 100%;
+            height: 100%;
+        }
+        #d213{
+            width: 50px;
+            height: 20px;
+            background: rgb(174, 231, 231);
+            float: right;
+            font-size: 14px;
+            text-decoration: none;
+            padding: 5px 10px;
+            position: relative;
+            top: 25px;
+            border-radius: 10px;
+        }
+        #d213:hover{
+            color: red;
+        }
+        #da{
+            width: 100px;
+            height: 20px;
+            font-size: 14px;
+            text-decoration: none;
+            padding: 5px 10px;
+            float: left;
+            background-color:grey;
+        }
+        #da:hover{
+            color: pink;
+        }
+        #if1{
+            width:100%;
+            height:270px;
+        }
+        #d31{
+            width: 900px;
+            height: 500px;
+            border: 0px ;
+            margin: 5px;
+            float: left;
+        }
+        #d310,#d320,#d20{
+            font-size: 28px;
+        }
+        #d311,#d312,#d313,#d314,#d315,#d316,#d317,#d318{
+            width: 200px;
+            height: 200px;
+            float: left;
+            border: 0px solid #000;
+            margin: 5px;
+            background: white;
+            z-index:6;
+            overflow: hidden;
+        }
+        #d311a{
+            width: 100%;
+            height: 150px;
+            transition:1s ease-in-out;
+            display: block;
+            z-index: 1;
+        }
+        #d311a:hover{
+            transform: scale(1.05);
+        }
+        #d321,#d322{
+            width: 400px;
+            height: 200px;
+            float: left;
+            border: 0px solid #000;
+            margin: 5px;
+            background: white;
+            z-index:6;
+            overflow: hidden;
+        }
+        #d321a{
+            width: 250px;
+            height: 200px;
+            transition:1s;
+        }
+        #d321a:hover{
+            transform: scale(1.05); 
+        }
+        #d321b{
+            width: 100px;
+            float: right;
+            position: relative;
+            right: 20px;
+            top: -200px;
+        }
+        #d311b:hover{
+            color: rgb(116, 185, 196);
+        }
+        #d321c{
+            width: 50px;
+            height: 20px;
+            background: rgb(174, 231, 231);
+            float: right;
+            font-size: 14px;
+            text-decoration: none;
+            padding: 5px 10px;
+            position: relative;
+            top: -50px;
+            left: 100px;
+            border-radius: 20px;
+        }
+        #d321c:hover{
+            color: rgb(199, 193, 107);
+        }
+        #d321d{
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            border: 0px solid #000;
+            margin: 5px;
+            position: relative;
+            top: -120px;
+            left: 250px;
+        }
+        #i2{
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+        }
+        #d321e{
+            width: 100px;
+            height: 40px;
+            position: relative;
+            top: -170px;
+            left: 300px;
+        }
+        #p1{
+            color: grey;
+        }
+        #d41,#d42,#d43,#d44,#d45{
+            width: 250px;
+            height: 300px;
+            background-color: white;
+            float: left;
+            border: 0px solid #000;
+            margin: 5px;
+            overflow: hidden;
+        }
+        h1{
+            margin: 0px;
+            padding: 0px;
+        }
+        #d40{
+            position: relative;
+            right: 500px;
+        }
+        #d411{
+            transition:1s;
+        }
+        #d411:hover{
+            transform: scale(1.1);
+        }
+        #d412{
+            position: relative;
+            top: 10px;
+            float: left;
+            font-size: 28px;
+        }
+        #d413{
+            position: relative;
+            top: 70px;
+            left: -150px;
+            color: gray
+        }
+        #d414{
+            width: 50px;
+            height: 20px;
+            background: rgb(174, 231, 231);
+            float: right;
+            font-size: 14px;
+            text-decoration: none;
+            padding: 5px 10px;
+            position: relative;
+            top: 100px;
+            left: 0px;
+            border-radius: 25px;
+        }
+        #d414:hover{
+            background-color: rgb(112, 181, 182);
+        }
+        #d5{
+            width: 100%;
+            height: 300px;
+            background:#555 ;
+        }
+        #d51{
+            position: relative;
+            left: 300px;
+            top: 100px;
+        }
+        #a51{
+            position: relative;
+            float: left;
+            list-style: none;
+            font-size: 14px;
+            width:145px;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 1px;
+            color: #ccc;
+        }
+        #a51:hover{
+            color: rgb(206, 240, 184);
+        }
+        #d52{
+            position: relative;
+            left: -400px;
+            top: 200px;
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="c">
+            <div id="navi">遨游戏
+                    <a href="" id="a4">客服</a>
+                    <a href="" id="a5">帮助</a>
+                    <a href="" id="a3">充值</a>
+                    <a href="Untitled-4.html" id="a2" target="Untitled-4.html">注册</a>
+                    <a href="" id="a1">登录</a>
+                    <!-- <div id="dd1">
+                                    <div class="h"><iframe width="100%" height="100%" name="h1"></iframe></div>
+                                    <div class="hn">
+                                        <a href="QQ图片20190529085246.jpg" id="a5" target="h1">活动1</a>
+                                        <a href="QQ图片20190529085153.jpg" id="a4" target="h1">活动2</a>
+                                        <a href="QQ图片20190529085219.jpg" id="a3" target="h1">活动3</a>
+                                        <a href="QQ图片20190529085153.jpg" id="a2" target="h1">活动4</a>
+                                        <a href="QQ图片20190529085219.jpg" id="a1" target="h1">活动5</a>
+                                    </div>
+                    </div> -->
+            </div>    
+            <div class="menu">
+                    <ul class="u1">
+                        <li><a href="#" id="aa">官网首页</a></li >
+                        <li><a href="#" id="aa">游戏特色</a>
+                            <ul>
+                                <li><a href="#" id="aa">剧情</a></li>
+                                <li><a href="#" id="aa">玩法</a></li>
+                                <li><a href="#" id="aa">人物</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" id="aa">新闻活动</a>
+                            <ul>
+                                <li><a href="#" id="aa">最新</a></li>
+                                <li><a href="#" id="aa">活动</a></li>
+                                <li><a href="#" id="aa">新闻</a></li>
+                                <li><a href="#" id="aa">公告</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="" id="aa">视频直播</a>
+                            <ul>
+                                <li><a href="#" id="aa">推荐</a></li>
+                                <li><a href="#" id="aa">赛事</a></li>
+                                <li><a href="#" id="aa">小剧场</a></li>
+                                <li><a href="#" id="aa">精彩直播</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="" id="aa">同人站</a>
+                            <ul>
+                                <li><a href="#" id="aa">COS</a></li>
+                                <li><a href="#" id="aa">美图</a></li>
+                                <li><a href="#" id="aa">视频</a></li>
+                                <li><a href="#" id="aa">音乐</a></li>
+                            </ul>
+                        <li><a href="" id="aa">客服</a>
+                            <ul>
+                                <li><a href="#" id="aa">客服中心</a></li>
+                                <li><a href="#" id="aa">在线客服</a></li>
+                                <li><a href="#" id="aa">客服热线</a></li>
+                                <li><a href="#" id="aa">客服微信</a></li>
+                            </ul>
+                        </li>
+                        </li>
+                        <li><a href="" id="aa">二维码</a></li>
+                        <li><a href="" id="aa">论坛</a></li>
+                        <li><a href="Untitled-3.html" id="aa">返回重选</a></li>
+                     </ul>
+                </div>
+            <div id="d1">遨游戏</div>
+            <div id="d2">
+                <div id="d20">热门活动</div>
+                <div id="d21">
+                    <div id="d211"><img src="QQ图片20190529085140.jpg" alt="" id="i1"></div>
+                    <div id="d212">活动一</div>
+                    <div id="d213">前往></div>
+                </div>
+                <div id="d22">
+                    <div id="d211"><img src="QQ图片20190529085144.jpg" alt="" id="i1"></div>
+                    <div id="d212">活动二</div>
+                    <div id="d213">前往></div>
+                </div>
+                <div id="d23">
+                    <div id="d211"><img src="QQ图片20190529085140.jpg" alt="" id="i1"></div>
+                    <div id="d212">活动三</div>
+                    <div id="d213">前往></div>
+                </div>
+                <div id="d24">
+                    <div id="d211"><img src="QQ图片20190529085148.jpg" alt="" id="i1"></div>
+                    <div id="d212">活动四</div>
+                    <div id="d213">前往></div>
+                </div>
+                <div id="d25">
+                    <div id="d251">
+                        <a href="QQ图片20190529085246.jpg" id="da" target="if1">最新</a>
+                        <a href="1366x768 (2).jpg" id="da" target="if1">新闻</a>
+                        <a href="1366x768 (3).jpg" id="da" target="if1">活动</a>
+                        <a href="QQ图片20190529085240.jpg" id="da" target="if1">公告</a>
+                    </div>
+                    <div id="d252">
+                        <iframe  name="if1" id="if1"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div id="d3">
+                <div id="d31">
+                    <div id="d310">精彩视频</div>
+                    <div id="d311">
+                        <div id="d311a"><img src="1366x768 (1).jpg" alt="" id="i1"></div>
+                        <div id="d311b">咫尺韶华剧情大片上映</div>
+                    </div>
+                    <div id="d312">
+                            <div id="d311a"><img src="1366x768 (2).jpg" alt="" id="i1"></div>
+                            <div id="d311b">咫尺韶华剧情大片上映</div>
+                        </div>
+                    <div id="d313">
+                            <div id="d311a"><img src="1366x768 (3).jpg" alt="" id="i1"></div>
+                            <div id="d311b">咫尺韶华剧情大片上映</div>
+                        </div>
+                    <div id="d314">
+                                <div id="d311a"><img src="1366x768 (4).jpg" alt="" id="i1"></div>
+                                <div id="d311b">咫尺韶华剧情大片上映</div>
+                        </div>
+                        <div id="d315">
+                                <div id="d311a"><img src="1366x768 (5).jpg" alt="" id="i1"></div>
+                                <div id="d311b">咫尺韶华剧情大片上映</div>
+                        </div>
+                        <div id="d316">
+                                <div id="d311a"><img src="1366x768 (6).jpg" alt="" id="i1"></div>
+                                <div id="d311b">咫尺韶华剧情大片上映</div>
+                        </div>
+                        <div id="d317">
+                                <div id="d311a"><img src="1366x768 (7).jpg" alt="" id="i1"></div>
+                                <div id="d311b">咫尺韶华剧情大片上映</div>
+                        </div> 
+                        <div id="d318">
+                                <div id="d311a"><img src="1366x768 (8).jpg" alt="" id="i1"></div>
+                                <div id="d311b">咫尺韶华剧情大片上映</div>
+                        </div>           
+                </div>
+                <div id="d32">
+                    <div id="d320">精彩直播</div>
+                    <div id="d321">
+                        <div id="d321a"><img src="1366x768 (9).jpg" alt="" id="i1"></div>
+                        <div id="d321b">争锋第一轮
+                            <hr>
+                            19:00
+                        </div>
+                        <div id="d321c">前往></div>
+                        <div id="d321d"><img src="1366x768 (10).jpg" alt="" id="i2"></div>
+                        <div id="d321e"><p id="p1">用户12345</p></div>
+                    </div>
+                    <div id="d322">
+                        <div id="d321a"><img src="1366x768 (11).jpg" alt="" id="i1"></div>
+                        <div id="d321b">争锋第二轮
+                            <hr>
+                            21:00
+                        </div>
+                        <div id="d321c">前往></div>
+                        <div id="d321d"><img src="1366x768 (12).jpg" alt="" id="i2"></div>
+                        <div id="d321e"><p id="p1">用户12345</p></div>
+                    </div>
+                </div>
+            </div>
+            <div id="d4">
+                <div id="d40"><h1>同人</h1></div>
+                <div id="d41">
+                        <div id="d411"><img src="1366x768 (13).jpg" alt="" id="i1"></div>
+                        <div id="d412">凿壁偷光</div>
+                        <div id="d413">用户1</div>
+                        <div id="d414">前往></div>
+                </div>
+                <div id="d42">
+                        <div id="d411"><img src="1366x768 (14).jpg" alt="" id="i1"></div>
+                        <div id="d412">悬梁刺股</div>
+                        <div id="d413">用户2</div>
+                        <div id="d414">前往></div>
+                </div>
+                <div id="d43">
+                        <div id="d411"><img src="1366x768 (15).jpg" alt="" id="i1"></div>
+                        <div id="d412">卧薪尝胆</div>
+                        <div id="d413">用户3</div>
+                        <div id="d414">前往></div>
+                </div>
+                <div id="d44">
+                        <div id="d411"><img src="1366x768 (16).jpg" alt="" id="i1"></div>
+                        <div id="d412">怀璧其罪</div>
+                        <div id="d413">用户4</div>
+                        <div id="d414">前往></div>
+                </div>
+                <div id="d45">
+                        <div id="d411"><img src="1366x768 (17).jpg" alt="" id="i1"></div>
+                        <div id="d412">咫尺韶华</div>
+                        <div id="d413">用户5</div>
+                        <div id="d414">前往></div>
+                </div>
+            </div>   
+            <div id="d5">
+                <div id="d51">
+                    <a href="" id="a51">关于我们</a>
+                    <a href="" id="a51">服务协议</a>
+                    <a href="" id="a51">客服中心</a>
+                    <a href="" id="a51">联系我们</a>
+                    <a href="" id="a51">诚聘英才</a>
+                </div>
+                <div id="d52">
+                    婉拒18岁以下未成年用户进入游戏 健康游戏忠告：抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当 适度游戏益脑 沉迷游戏伤身合理安排时间 享受健康生活 进入：未成年人家长监护系统 违法和不良信息举报中心</div>
+            </div>
+</body>
+</html>

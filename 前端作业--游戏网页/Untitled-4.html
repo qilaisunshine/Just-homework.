@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+         body{
+            margin: 0px;
+            text-align: center;
+        }
+        #navi{
+            margin: 0 auto;
+            background: rgb(46, 57, 66);
+            width: 100%;
+            height: 40px;
+            font-size: 10px left;
+        }
+        #navi a{
+            height: 20px;
+            font-size: 14px;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-top: #fff 5px solid;
+            float: left;
+            background-color:rgb(46, 57, 66);
+            float: right;
+            color: rgb(186, 201, 214);
+            position: relative;
+            top: -20px;
+        }
+        #navi a:hover{
+            color: rgb(74, 104, 109);
+            border-top: yellow 5px solid;
+        }
+        #i1{
+            position: fixed;
+            top: 200px;
+            left: 550px;
+        }
+        #i2{
+            position: fixed;
+            top: 200px;
+            left: 600px;
+        }
+        #g2{
+            position: absolute;
+            float: left;
+            list-style: none;
+            font-size: 14px;
+            width:100px;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 1px;
+            background: #0ff;
+            z-index:6;
+            top: 50px;
+            left: 1200px;
+        }
+        #pp{
+            color: #ff0;;
+            padding: 0px;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+        <div id="navi">
+            <p id="pp">遨游戏</p>
+                <a href="" id="a4">客服</a>
+                <a href="" id="a5">帮助</a>
+                <a href="" id="a3">充值</a>
+                <a href="" id="a2">注册</a>
+                <a href="" id="a1">登录</a>
+        </div>
+    <form action="">
+        用户名&nbsp;&nbsp;&nbsp;&nbsp;：<input type="text">
+        <br>
+        密码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;：<input type="password">
+        <br>
+        确认密码：<input type="password">
+        <input type="submit" value="提交" id="i1">
+        <input type="reset" value="重置" id="i2">
+    </form>
+    <div id="g2"><a href="Untitled-3.html">返回</a></div>
+</body>
+</html>
